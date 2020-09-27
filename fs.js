@@ -1,10 +1,8 @@
 const read = require('readline');
-
 const rl = read.createInterface({
     input : process.stdin,
     output : process.stdout
 })
-let b;
 rl.question(`utgaa oruul: `, (userInpute) => {
     const trimer = userInpute.trim();
     b = trimer;
@@ -19,13 +17,12 @@ const fs = require('fs');
 //     }
 //     console.log("The file was saved!");
 // });
-fs.appendFile("/Users/Tserenjigmed/desktop/september/text.txt", `${trimer}`, function(err) {
+// writefile ni ter bagaa textiig ustgaad shuud odoo baiga utgaa oruuldag
+//appendFile ni odoo baigaag nemdeg
+fs.appendFile("/Users/Tserenjigmed/desktop/september/text.txt", b, function(err) {
     if(err) {
         return console.log(err);
     }
     console.log("The file was saved!");
 }); 
 
-
-// Or
-// fs.writeFileSync('/Users/Tserenjigmed/desktop/september', 'Hey there!');
