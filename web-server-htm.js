@@ -14,5 +14,4 @@ http.createServer((req, res) => {
             return res.end();
         }  
     })
-  //write a response to the client
 }).listen(8000);

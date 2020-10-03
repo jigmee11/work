@@ -1,20 +1,18 @@
-const pi = require('./new-matth');
-const read = require('readline');
-const rl = read.createInterface({
-    input : process.stdin,
-    output : process.stdout
-})
-let a;
-let b;
-let c = false;
-rl.question(`input: `,(userInfo)=>{
-    let arr = userInfo.trim().split(' ');
-    console.log(pi.max(arr[0],a[1]));
-    console.log(pi.min(arr[0],a[1]));
-    console.log(pi.sqrt(arr[0]));
-    console.log(pi.round(arr[0]));
-    console.log(pi.ceil(arr[0]));
-    console.log(pi.floor(arr[0]));
-    rl.close(); 
-})
+const readline = require('readline');
+const { max } = require('./new-math');
+const math = require('./new-math');
 
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+})
+rl.question('a,b: ', (a)=>{
+    const array = a.trim().split(' ');
+    const p = parseInt(array[0]);
+    const t = parseInt(array[1]);
+    console.log(math.max(p,t) + " ih");
+    console.log(math.sqrt(p))
+    console.log(math.floor(a));
+    console.log(math.abs(a));
+    rl.close();
+})
